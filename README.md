@@ -1,68 +1,42 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React Mini Challenge: State & Events
 
-## Available Scripts
+## Instructions
 
-In the project directory, you can run:
+Fork this repo, then run `git clone` to download it locally. Then `cd` into the downloaded directory and open it in your text editor with `code .`.
 
-### `yarn start`
+To get started, run:
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```
+npm install
+npm start
+```
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Submitting
 
-### `yarn test`
+When you’re finished, run the following commands in your terminal to submit:
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+git add .
+git commit -m 'Done'
+git push
+```
 
-### `yarn build`
+To get feedback on your code, make sure to enable issues on this repo as well! Go to the Settings page for your fork, find the checkbox for 'Issues' and make sure it is checked.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Assignment
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+We're going to refactor our Spice Store app to better isolate out separate components, and understand how to pass data from a child to a parent using **inverse data flow**.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The started code should feel similar to the State & Events Mini Challenge. One thing has changed - we introduced a new component, `Filter`, that is a child of the `SpiceList` component.
 
-### `yarn eject`
+Update the `Filter` and `SpiceList` components to complete these deliverables:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- [ ] When a user types in the search bar, the list of spices displayed should be filtered to match based on the text in the input field and the *notes* property of the spice. For example, if the user types 'warm', the list should show Allspice, Cardamom Pods, and Garam Masala.
+- [ ] When the user clicks the checkbox next to '4 Star Only', the list of spices should be filtered to only display the spices with a *rating* of 4 or higher.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+For both these deliverables, you'll need to set state in the `SpiceList` component after an event occurs in the `Filter` component.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Tips
+You will need to find a way to pass data up from a child to a parent component, instead of the normal flow of a parent passing down data to a child. Refer to the [Thinking In React - Inverse Data Flow](https://reactjs.org/docs/thinking-in-react.html#step-5-add-inverse-data-flow) section for an example.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Make sure you are comfortable passing callbacks around and understand the difference between a function *definition* and a function *invocation*.
