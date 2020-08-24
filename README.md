@@ -1,4 +1,4 @@
-# React Mini Challenge: State & Events
+# React Mini Challenge: Inverse Data Flow
 
 ## Instructions
 
