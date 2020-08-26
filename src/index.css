@@ -56,7 +56,7 @@ header h3 {
   margin: 0 1rem 0 0.25rem;
 }
 
-.spice-list {
+main {
   width: 80vw;
   max-width: 800px;
   margin: 0 auto;
@@ -111,4 +111,18 @@ header h3 {
 
 .star-rating .background {
   display: flex;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input,
+form textarea {
+  margin-bottom: 0.5rem;
+}
+
+form input[type="submit"] {
+  width: 150px;
 }

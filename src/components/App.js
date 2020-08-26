@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './Header';
 import SpiceList from './SpiceList';
+import NewSpice from './NewSpice';
 
 // spice info taken from spicejungle.com
 const spices = [
@@ -79,13 +80,34 @@ const spices = [
 ]
 
 // function component
-function App() {
-  return (
-    <>
-      <Header spiceCount={spices.length} />
-      <SpiceList spices={spices} />
-    </>
-  );
+class App extends React.Component {
+  state = {
+    spices: spices
+  }
+
+  // TODO: use me to add a new spice when the NewSpice form submits
+  addNewSpice = newSpice => {
+
+    this.setState(prevState => {
+      const updatedSpices = [newSpice, ...prevState.spices]
+
+      return {
+        spices: updatedSpices
+      }
+    })
+  }
+
+  render() {
+    return (
+      <>
+        <Header spiceCount={this.state.spices.length} />
+        <main>
+          <NewSpice />
+          <SpiceList spices={this.state.spices} />
+        </main>
+      </>
+    );
+  }
 }
 
 export default App;
