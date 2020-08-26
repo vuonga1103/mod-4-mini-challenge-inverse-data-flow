@@ -85,7 +85,7 @@ class App extends React.Component {
     spices: spices
   }
 
-  // TODO: use me to add a new spice when the NewSpice form submits
+  // This function has to be passed down to NewSpice
   addNewSpice = newSpice => {
 
     this.setState(prevState => {
@@ -102,7 +102,7 @@ class App extends React.Component {
       <>
         <Header spiceCount={this.state.spices.length} />
         <main>
-          <NewSpice />
+          <NewSpice addNewSpice={ this.addNewSpice }/>
           <SpiceList spices={this.state.spices} />
         </main>
       </>
